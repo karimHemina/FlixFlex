@@ -13,4 +13,13 @@ class Show extends Model
     protected $casts = [
         'type'  =>  ShowType::class,
     ];
+
+    public function scopeFilter($query)
+    {
+        if (request('title')) {
+            $query->where('title', 'like', '%' . request('title') . '%');
+        }
+
+        return $query;
+    }
 }

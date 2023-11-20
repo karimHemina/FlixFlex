@@ -21,7 +21,7 @@ class ShowsSeeder extends Seeder
                     [
                         'title'         => $movie['original_title'],
                         'overview'      =>  $movie['overview'],
-                        'type'          =>  'movies',
+                        'type'          =>  'movie',
                         'popularity'    =>  $movie['popularity'],
                         'release_date'  =>  $movie['release_date'],
                     ]

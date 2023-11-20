@@ -29,10 +29,7 @@ class UserController extends Controller
 
     public function logout(Request $request)
     {
-        if(Auth::check()){
-            $this->userService->logout(auth()->user());
-            return response(['message' => __('Logged out successfully')]);
-        }
-        return response(['message' => __('User not authenticated')], 401);
+        $this->userService->logout(auth()->user());
+        return response(['message' => __('Logged out successfully')]);
     }
 }
