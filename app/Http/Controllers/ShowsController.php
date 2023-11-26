@@ -12,6 +12,7 @@ class ShowsController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate();
         Show::create($request->all());
     }
     public function getSeries()
