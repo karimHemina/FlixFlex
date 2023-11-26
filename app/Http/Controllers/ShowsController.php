@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class ShowsController extends Controller
 {
+
+    public function store(Request $request)
+    {
+        Show::create($request->all());
+    }
     public function getSeries()
     {
         $series = Show::filter()->where('type', ShowType::SERIES)->paginate(10);

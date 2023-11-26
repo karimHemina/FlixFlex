@@ -34,6 +34,8 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('shows/get-favorites', [FavoritesController::class, 'getFavorites']);
 
         Route::get('shows/{show_id}', [ShowsController::class, 'getShowDetails']);
+
+        Route::apiResource('shows', ShowsController::class);
     });
 
 });
